@@ -1,6 +1,6 @@
 //MVP
 //1a)
-val taskA: Boolean = (3+4)*57 < 300
+val taskA: Boolean = 3+4*57 < 300
 //1b)
 val taskB: Boolean = 144 / 12 >= 12
 //1c)
@@ -14,6 +14,7 @@ val taskF: Boolean = 75/9 < 30 && 89 / 6 < 20
 
 //2)
 //The difference between a string (e.g. "I love scala already") and a print line (e.g. printin ("I love scala already")) is that the string is either being declared or passed as a value (assigned to val or var) whereas a println is a command that includes a string and prints the line to the program. The latter includes a string, but is more than a string alone.
+//Println returns a unit.
 
 //3)
 println(s"The answer to Task 1a is ${taskA} but the answer to Task B is ${taskB}. Meanwhile, the answers to tasks c, d and e are: ${taskC}, ${taskD} and ${taskE}. Last, but not least, the answer to task F is ${taskF}.")
@@ -50,4 +51,5 @@ myNextString.capitalize
 //This was a surprisingly and stupendously easy solution compared to selecting a character from an index.
 
 //Research
+//` ` - backticks allow keywords to be used.
 //Some words that I found cannot be used are: case, class, extends, abstract, finally, super, null, object, if, else, val, var, type, true, false.
