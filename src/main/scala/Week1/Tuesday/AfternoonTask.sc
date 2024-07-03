@@ -21,15 +21,33 @@ println(s"The answer to Task 1a is ${taskA} but the answer to Task B is ${taskB}
 
 //Extension
 //1 - This is false because the letters are all assigned numerical values. Capitalised letters are assigned different values to lower case letters and therefore the numerical values are totally different.
-//2 - If the string was "1", it would be easy to use the toInt method attached to strings to convert it. However, as this isn't the case, it is a more complex route:
+//2 - If the string was "1", it would be easy to use the toInt method attached to strings to convert it. However, as this isn't the case, it is a more complex route using PartialFunction and lifting:
+val convertStr: PartialFunction[String, Int] = {
+  case "one" => 1
+}
+
+convertStr.lift("one").foreach(println)
 
 //3
+val convertInt: PartialFunction[Int, String] = {
+  case 1 => "one"
+}
+
+convertInt.lift(1).foreach(println)
 
 //4
+val i: Int = 1
+i.toString
+//Yes, I think this is what I would expect to see.
 
 //5
+val myString: String = "hello"
+myString.toUpperCase()
 
 //6
+val myNextString: String = "hello"
+myNextString.capitalize
+//This was a surprisingly and stupendously easy solution compared to selecting a character from an index.
 
 //Research
 //Some words that I found cannot be used are: case, class, extends, abstract, finally, super, null, object, if, else, val, var, type, true, false.
