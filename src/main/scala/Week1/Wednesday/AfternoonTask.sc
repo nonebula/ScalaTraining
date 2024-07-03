@@ -34,8 +34,28 @@ println(f"John's purchase of watermelons has cost him £$storePrice%.2f!")
 //The 'Double' type is most appropriate here as you're dealing with decimals.
 
 //Extension
+//1
+//The order of logical operators in IF statements in descending order is: NOT, AND, OR
 
+//2
+//(true || false && false) would result in ...
 
+//3
+//((true || false) && false) would result in ...
+
+//4
+// (1 < 4 && 7!= 10*| 9 + 10 == 21) would result in ...
 
 
 //Research
+val valueOne: Int = 3
+val valueTwo: Int = 8
+var stringStore: String = ""
+
+if (valueOne > valueTwo) {
+  stringStore = ("yes")
+  println(stringStore)
+} else if (valueTwo > valueOne) {
+  stringStore = ("no")
+  println(stringStore)
+}
