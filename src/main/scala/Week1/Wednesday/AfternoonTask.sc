@@ -35,16 +35,16 @@ println(f"John's purchase of watermelons has cost him £$storePrice%.2f!")
 
 //Extension
 //1
-//The order of logical operators in IF statements in descending order is: NOT, AND, OR
+//The order of logical operators in IF statements in descending order is: NOT (!), AND (&&), OR(||).
 
 //2
-//(true || false && false) would result in ...
+//(true || false && false) would result in false && false being evaluated first, because the order of precedence demands it. This would resolve to simplify the expression to true || false.
 
 //3
-//((true || false) && false) would result in ...
+//((true || false) && false) would result in the true || false part being evaluated first. This would evaluate to true because at least one of these would be true.
 
 //4
-// (1 < 4 && 7!= 10*| 9 + 10 == 21) would result in ...
+// (1 < 4 && 7!= 10*| 9 + 10 == 21) would result in true.
 
 
 //Research
