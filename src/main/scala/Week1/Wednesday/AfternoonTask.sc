@@ -21,7 +21,7 @@ val hasBag: Boolean = true
 
 //5
 if (watermelons > 3 && watermelons <5 && hasBag) {
-  println(s"You can't carry this many watermelons, even with a bag! Total watermelons: $watermelons")
+  println(s"You can carry this many watermelons with a bag! Total watermelons: $watermelons")
 } else {
   println("John either doesn't have a bag or the number entered is invalid.")
 }
@@ -50,12 +50,14 @@ println(f"John's purchase of watermelons has cost him £$storePrice%.2f!")
 //Research
 val valueOne: Int = 3
 val valueTwo: Int = 8
-var stringStore: String = ""
-
-if (valueOne > valueTwo) {
-  stringStore = ("yes")
-  println(stringStore)
-} else if (valueTwo > valueOne) {
-  stringStore = ("no")
-  println(stringStore)
-}
+//var stringStore: String = ""
+//
+//if (valueOne > valueTwo) {
+//  stringStore = ("yes")
+//  println(stringStore)
+//} else if (valueTwo > valueOne) {
+//  stringStore = ("no")
+//  println(stringStore)
+//}
+val myString = if (valueOne > valueTwo) "yes" else "no"
+println(myString)
