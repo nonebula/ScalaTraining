@@ -39,6 +39,7 @@ val getMapData = map1("one")
 
 //.map
 val tripledSeq: Seq[Int] = seq1.map {
+  //anonymous function, give any name (number used in these examples)
   number => number * 3
 }
 
@@ -101,3 +102,39 @@ val containsList: Boolean = list1.contains(0)
 
 //can only check the key in map
 val containsMap: Boolean = map1.contains("six")
+
+
+//Arrays
+//Don't dwell too much as they aren't used like in JS.
+val array1: Array[Int] = Array(1,2,3)
+val plusTwo: Array[Int] = array1.map {
+  //anything can go in the _ slot below, as with number above
+  _ + 2
+}
+
+//Adding into a list
+var x = Seq[Int]()
+x :+ 1
+x :+ 2
+println(x)
+
+var x = List[Int]()
+x :+= 2
+x :+= 3
+println(x)
+//If you use the above, this is UNSAFE. This is not a method you want to use. var should be avoided as much as possible.
+
+//Safer approach:
+val y = Seq(3,4,5)
+
+//append
+val z = y:+ 6
+
+//prepend
+val k = 2+:y
+
+//using ++ to add more than one into
+val t = y ++ Seq(6,7,8,9,10)
+
+//prepending more
+val w = Seq(1,2) ++ t
