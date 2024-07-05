@@ -40,10 +40,18 @@ println(getDogNames)
 
 //Extension
 //1. Starting with a Seq(1-9), come up with 2 filters that, when used together, will return Seq (1,2,5,7).
-val newNumberSeq: Seq[Int] = Seq(1,2,3,4,5,6,7,8,9)
+val newNumberSeq: Seq[Int] = Seq(1, 2, 3, 4, 5, 6, 7, 8, 9)
+//numbers that are odd and less than 8
 val filterOne: Seq[Int] = newNumberSeq.filter{
-  number => number % 2 == 1 && number < 8
+  number => (number % 2 == 1 && number < 8)
 }
+//number equals 2
+val filterTwo: Seq[Int] = newNumberSeq.filter{
+  number => number == 2
+}
+val result: Seq[Int] = filterOne ++ filterTwo
+val finalResult: Seq[Int] = result.distinct
+println(finalResult)
 
 //2. The head function returns the first element of a list, and the tail function returns everything except the first element. Use head and tail only to get the 3rd element of a List.
 
@@ -60,4 +68,4 @@ Set(1,2) == Set(2,1,1,1) //returns true because in a set it will not recognise m
 List(3,4) == Seq(3,4) //returns true because the values in both are equivalent in both type and value as well as location in their collections.
 
 // What about List(5,6) == Set(5,6)?
-List(5,6) == Set(5,6) //returns false because...
+List(5,6) == Set(5,6) //returns false because the type of collection is different and equality takes this into account.
