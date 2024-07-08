@@ -22,6 +22,8 @@ println(containsColor)
 def isOdd(number: Int): Boolean = number % 2 !=0
 val oddNumbers: List[Boolean] = numbers.map(isOdd)
 println(oddNumbers)
+//OR (more relevant to lesson content)
+val oddsAndEvens: List[Boolean] = numbers.map (number => number % 2 !=0)
 
 //3. David has a lot of pets. Decide what pets he has (must include at least 1 dog) and write these in a Map.
 val davidsPets: Map[String, List[String]] = Map(
@@ -31,6 +33,7 @@ val davidsPets: Map[String, List[String]] = Map(
   "tiger" -> List ("lucifer"),
   "goldfish" -> List ("goldie", "silver")
 )
+//NOTE ON THIS: Best practice to create a new item everytime rather than nesting in this manner. The nesting causes issues down the line with scalability and making later changes.
 
 //4. Return a List of the names of David's dog(s).
 val getDogNames: List[String] = davidsPets.getOrElse("dog", List())
@@ -52,13 +55,19 @@ val filterTwo: Seq[Int] = newNumberSeq.filter{
 val result: Seq[Int] = filterOne ++ filterTwo
 val finalResult: Seq[Int] = result.distinct
 println(finalResult)
+//didn't finish this and get it working :(
 
 //2. The head function returns the first element of a list, and the tail function returns everything except the first element. Use head and tail only to get the 3rd element of a List.
-
+numbers(2)
+val firstTail = numbers.tail
+val secondTail = firstTail.tail
+val thirdTail = secondTail.tail
+val thirdElement = thirdTail.head
+println(thirdElement)
 
 //Research
 //1. What makes a Set different from a Seq?
-//In a set, all entries must be unique.
+//In a set, all entries must be unique. They are also unordered. In a sequence there is priority to ordering.
 
 // What should Set(1,2) == Set(2,1,1,1) return?
 Set(1,2) == Set(2,1,1,1) //returns true because in a set it will not recognise multiple of the same value. All entries to a set must be unique. {Does this mean if there are multiple, they are just ignored??}
