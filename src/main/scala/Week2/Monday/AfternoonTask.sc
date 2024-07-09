@@ -9,10 +9,20 @@ def pureFibs(n:Int, seq:Seq[Int]): Seq[Int] = {
 }
 
 //3. If using an impure function in this case, it could be effective as it would print the next calculation following on each call. The impure element could be useful in this case.
+// Impure fibonacci function
+var sequence:Seq[Int] = Seq(3,4)
+def impureFibs(n:Int):Seq[Int] = {
+  val n1:Int = sequence.reverse.head
+  val n2:Int = sequence.reverse.tail.head
+  if (n <= 0) sequence else{
+    sequence = sequence:+n1+n2
+    impureFibs(n-1)
+  }
+}
 
 //4.
 pureFibs(4, start)
-
+impureFibs(5)
 
 //Extension
 //1. infix notation is a way of calling methods using an operator-like syntax. Often used for methods that take a single argument.
@@ -23,8 +33,9 @@ println(str)
 //2. have to use Scala's 'readLine' operation
 
 //import scala.io.StdIn.readLine
-//def greetUser(name: String): Unit = {
-//  println("Enter a greeting:")
+//
+//object HelloInteractive extends App {
+//  print("Enter a greeting:")
 //  val input = readLine()
 //  if (input == "Hello") {
 //    println(s"Hello $name")
@@ -32,8 +43,8 @@ println(str)
 //    println("Unrecognised Greeting")
 //  }
 //}
-//
-//greetUser("Joe")
+
+
 
 //3. Chessboard positions
 
