@@ -9,6 +9,10 @@ package Week2.Wednesday
 //
 //• If the input is divisible by 3 and 5 (with no remainder) return the word "FizzBuzz"
 
-class FizzBuzz {
-
+class FizzBuzzApp {
+  def fizzBuzz(n:Int): String = {
+    ()
+  }
 }
+
+
