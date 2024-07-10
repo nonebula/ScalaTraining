@@ -10,8 +10,8 @@ class TwoNumbersSpec extends FlatSpec {
   }
 
   "subtract" should "subtract numbers" in {
-    val nums = new TwoNumbers(3,2)
-    assert(nums.subtract == 1)
+    val nums = new TwoNumbers(1,2)
+    assert(nums.subtractYFromX == -1) //must consider edge cases in situations like this
   }
 }
 
