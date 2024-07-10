@@ -10,7 +10,7 @@ case class Person (name: String, age: Int, nationality: String, isStudent: Boole
 val firstPerson = new Person("Carlos", 23, "Spanish", true)
 
 //c) - runs
-val secondPerson = Person("Carlos", 23, "Spanish", true)
+val secondPerson = Person("Carlos", 23, "Spanish", isStudent = true)
 
 //d) val - error - no use of val, not assigned.
 //thirdPerson = Person("Chloe", 25, "British", false)
@@ -38,7 +38,7 @@ val finalChocolateMuffin = Muffin("choocolate", 2.50, "MercatorBakery")
 /** Extension */
 //1.Construct a case class that takes in a minimum of 3 parameters, each of a different type, and a case object.
 case class VideoGame (genre: String, price: Int, childAppropriate: Boolean)
-case object GameStore
+case object GameStore //could include params here. Extra params.
 
 //2. Create 3 instances of the case class.
   val marioKart = VideoGame("Arcade", 25, childAppropriate = true) //intellij requested me to name the boolean operators, reason for this?
@@ -49,84 +49,84 @@ case object GameStore
   println(s"Game genre: ${maxPayne.genre}, Price: ${maxPayne.price}, Child Appropriate: ${maxPayne.childAppropriate}")
   println(s"Game genre: ${nba2K.genre}, Price: ${nba2K.price}, Child Appropriate: ${nba2K.childAppropriate}")
 
-  println(GameStore)
+  GameStore
 
 //3. Use the ".copy" method to create a further 3 instances, each time modifying a different class parameter.
 val damagedMario = marioKart.copy(price = 15)
 val familyMaxPayne = maxPayne.copy(childAppropriate = true)
 val cheapNba2K = nba2K.copy(price = 30)
 
-println(damagedMario)
-println(familyMaxPayne)
-println(cheapNba2K)
+damagedMario
+familyMaxPayne
+cheapNba2K
 
 //4. Use the "toString" method to print all parameters of the instance you have already created for exercise 3.
-println(damagedMario.toString)
-println(familyMaxPayne.toString)
-println(cheapNba2K.toString)
+damagedMario.toString
+familyMaxPayne.toString
+cheapNba2K.toString
 
 //5. Use the "equals" method to compare case class instances you have already created as part of the exercises so far.
-println(marioKart.equals(damagedMario))
-println(maxPayne.equals(familyMaxPayne))
-println(nba2K.equals(cheapNba2K))
+marioKart.equals(damagedMario)
+maxPayne.equals(familyMaxPayne)
+nba2K.equals(cheapNba2K)
 
   /** Research */
 //1. We discussed about ".copy", ".toString" and "equals" methods but there are a lot more available, such as "getClass", "canEqual" etc. Find as many as you can, what do they do? Try to apply them the case classes you've created.
 //.equals() - Checks if another instance is equal to this one
   val anotherMarioKart = VideoGame("Arcade", 25, childAppropriate = true)
-println(marioKart.equals(anotherMarioKart)) // true
+marioKart.equals(anotherMarioKart) // true
 
 //.eq - Checks if two references are the same (reference equality)
 val sameReference = marioKart
-println(marioKart.eq(sameReference)) // true
-println(marioKart.eq(anotherMarioKart)) // false
+marioKart.eq(sameReference) // true
+marioKart.eq(anotherMarioKart) // false
 
 //.hashCode - returns a hash code value for the object
-println(marioKart.hashCode)
+marioKart.hashCode
 
 //.toString - returns a string representation of the object
-println(marioKart.toString)
+marioKart.toString
 
 //.canEqual - Checks if the object can be compared for equality
-println(marioKart.canEqual(anotherMarioKart))
-println(marioKart.canEqual("some string"))
+marioKart.canEqual(anotherMarioKart)
+marioKart.canEqual("some string")
 
 //.productArity - Returns the number of elements in the product (case class)
-println(marioKart.productArity) // 3
+marioKart.productArity // 3
 
 //.productElement - Returns the nth element of the product (case class)
-println(marioKart.productElement(0))
-println(marioKart.productElement(1))
-println(marioKart.productElement(2))
+marioKart.productElement(0)
+marioKart.productElement(1)
+marioKart.productElement(2)
 
 //.productElementName - Returns the name of the nth element of the product (case class)
-println(marioKart.productElementName(0))
-println(marioKart.productElementName(1))
-println(marioKart.productElementName(2))
+marioKart.productElementName(0)
+marioKart.productElementName(1)
+marioKart.productElementName(2)
 
 //.productElementName - Returns the name of the nth element of the product (case class)
-println(marioKart.productElementName(0))
-println(marioKart.productElementName(1))
-println(marioKart.productElementName(2))
+marioKart.productElementName(0)
+marioKart.productElementName(1)
+marioKart.productElementName(2)
 
 //.productIterator - Returns an iterator over all the elements of the product (case class)
 marioKart.productIterator.foreach(println)
 
 //.productPrefix - Returns the prefix of the product (case class)
-println(marioKart.productPrefix)
+marioKart.productPrefix
 
 //.getClass - Returns the runtime class of the object
-println(marioKart.getClass)
+marioKart.getClass
 
 //.!= - Checks if two instances are not equal
 val differentGame = VideoGame("Racing", 30, childAppropriate = true)
-println(marioKart != differentGame)
+marioKart != differentGame
 
 //.## - Returns a hash code value for the object (synonym for hashCode)
-println(marioKart.##)
+marioKart.##
 
 //.== - Checks if two instances are equal (same as equals)
-println(marioKart == anotherMarioKart) // true
+marioKart == anotherMarioKart // true
 
 //.asInstanceOf - Casts the object to a different type
 val obj: Any = marioKart
