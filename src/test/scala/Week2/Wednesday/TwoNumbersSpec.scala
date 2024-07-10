@@ -48,3 +48,5 @@ class TwoNumbersSpec extends FlatSpec {
 }
 
 //sbt test will run all tests
+
+//Pull Request - This PR will ... [CAN USUALLY COPY AND PASTE WHAT IT WILL DO FROM THE TICKET]
