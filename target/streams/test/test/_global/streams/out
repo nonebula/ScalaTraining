@@ -1,0 +1,25 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wednesday.TwoNumbersSpec, org.scalatest.tools.Framework$$anon$1@11139a3d, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTwoNumbersSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32madd[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should add numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msubtractYFromX[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should subtract numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msubtractXFromY[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should subtract numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mmultiply[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should multiply numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mdivide[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should divide numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32misAMultiple[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return true when x is a multiple of y[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32misAMultiple[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return false when x is not a multiple of y[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32misAMultiple[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should throw IllegalArgumentException when y is 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 120 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 8[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 8, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Week2.Wednesday.TwoNumbersSpec[0m
