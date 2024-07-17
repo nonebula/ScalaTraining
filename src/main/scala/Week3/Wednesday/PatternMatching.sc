@@ -52,9 +52,10 @@ numOfWatermelons match {
 
 
 //Matching off OBJECTS
-trait Temperature
+sealed trait Temperature //Making this sealed, can only be extended within the same file that it's defined in. Compilation error will occur if no exhaustive match
 object Cold extends Temperature
 object Hot extends Temperature
+object Mild extends Temperature //Added later, match below is no longer exhaustive
 
 val weather: Temperature = Cold
 
@@ -62,5 +63,27 @@ val weather: Temperature = Cold
 weather match {
   case Cold => "Take a coat"
   case Hot => "Wear sun cream"
+  //Need to then add the added object. Otherwise compilation error
+  case Mild => "Maybe take another layer"
+  //case _ => "Not valid" - if wildcard included, will prevent any compilation errors
+}
+
+//Match using CLASSES
+abstract class Notification //made abstract right away. Don't want to be able to make instances, just extending it.
+//Abstract class cannot be instantiated, MUST be extended.
+case class Email (sender: String, title: String, body: String) extends Notification
+//making case classes because we like having the extra boilerplate code. No reason not to make a case class.
+case class SMS(caller: String, message: String) extends Notification
+case class VoiceRecording(contactName: String, link: String) extends Notification
+
+val notification: Notification = SMS("Mum", "Are you home?")//class hit, case classes too
+
+notification match {
+  case Email(sender, title, body) => "Email from: " + sender + "Title: " + title //can reference the other side | don't need to use all, can do if you want to
+  //if guard added ABOVE any case. Want to check it first
+  case SMS(caller, message) if caller == "Mum" => "SMS from " + caller + ". Don't ignore!"
+  case SMS(caller, message) => "SMS from " + caller
+  case VoiceRecording(contactName, link) => "Recording from: " + contactName + "With link: " + link
   case _ => "Not valid"
 }
+
