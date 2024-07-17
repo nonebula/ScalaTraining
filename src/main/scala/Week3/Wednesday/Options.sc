@@ -52,3 +52,9 @@ def whatCrust(pizza: Pizza): String = {
 
 whatCrust(pizzaOrder)
 
+// .get - doesn't allow for type safety
+val getCrust: String = pizzaOrder.crust.get //This is BAD practice because if called on an empty we'll get issues
+//If you see this being used, don't trust the developer.
+
+// .getOrElse - allows for a default to be given. Typesafe.
+val getOrElseCrust: String = pizzaOrder.crust.getOrElse("classic")
