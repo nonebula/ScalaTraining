@@ -1,8 +1,8 @@
 package Week2.Wednesday
 
-import org.scalatest.FlatSpec
+import org.scalatest.flatspec.AnyFlatSpec
 
-class TwoNumbersSpec extends FlatSpec {
+class TwoNumbersSpec extends AnyFlatSpec {
 
   "add" should "add numbers" in {
     val nums1 = new TwoNumbers(1,2) //new instance of class created. MUST declare new params everytime within test (better practice), unless vals always staying the same, then can be defined at top of document.
