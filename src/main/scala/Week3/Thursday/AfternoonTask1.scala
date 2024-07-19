@@ -1,6 +1,10 @@
 package Week3.Thursday
 
 object AfternoonTask1 extends App {
+
+  //insert a method to consider property price on input
+  //insert to consider the deposit on input too
+
   val propertyPrice: Int = 280000
 
   case class NewBuyer(annualEarnings: Int, deposit: Int, creditScore: Int)
