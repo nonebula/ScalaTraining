@@ -1,8 +1,8 @@
 package Week2.Wednesday
 
-import org.scalatest.FlatSpec
+import org.scalatest.flatspec.AnyFlatSpec
 
-class FizzBuzzSpec extends FlatSpec {
+class FizzBuzzSpec extends AnyFlatSpec {
 
   "playGame" should "return FizzBuzz for numbers divisible by both 3 and 5" in {
     val n = new FizzBuzz
