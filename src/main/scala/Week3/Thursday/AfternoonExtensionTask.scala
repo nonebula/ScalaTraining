@@ -13,11 +13,8 @@
 ////5
 //  case class InvalidPostcodeError (message: String) extends GenericPostageError
 ////6
-//  val letter: Either[GenericPostageError, Letter] = {
-//  }
-//  val invalidLetter: Either[GenericPostageError, Letter] = {
-//  }
-//  //7
+//val letter:Either[GenericPostageError, Letter] = Right(Letter(name=Name("string"), postcode=Postcode("postcode")))
+////7
 //
 ////8
 //
