@@ -1,6 +1,6 @@
-//package Week3.Thursday
-//
-//object AfternoonExtensionTask {
+package Week3.Thursday
+
+object AfternoonExtensionTask {
 ////1
 //  case class Name(value: String)
 //  case class Postcode(value: String)
@@ -30,4 +30,4 @@
 //
 ////14
 //
-//}
+}
